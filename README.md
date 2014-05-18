@@ -1,4 +1,4 @@
 ShinyTest
 =========
 
-Test map mad with Shiny and rCharts
+Test map made with Shiny and rCharts
