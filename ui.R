@@ -9,9 +9,7 @@ shinyUI(
 
 ## Side panel with selection widget and explanation text    
     sidebarPanel(
-          selectInput("decile", h5(p("Select decile to see schools on map."),
-                                    p("Zoom map to suit."),
-                                   p("Click on popups to see school names"), align = "center"), 1:10),
+        sliderInput("decile", h5(p("Select decile to see schools on map."), align = "center"), 1, 10, 1),
           helpText("Deciles are a way in which New Zealand Ministry of Education allocates 
                     funding to schools.
                     A school's decile rating indicates the extent to which 
@@ -25,6 +23,9 @@ shinyUI(
 
 ## main panel for map plotting    
     mainPanel(
-        mapOutput('myMap'))
+        mapOutput('myMap'),
+        helpText(h5(p("Zoom map to suit."),
+            p("Click on popups to see school names"), align="center")
+            ))
          )
     )
